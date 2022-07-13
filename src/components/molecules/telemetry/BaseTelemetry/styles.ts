@@ -1,10 +1,15 @@
-import { styled } from "../../util/stitches.config";
+import { styled } from "../../../../util/stitches.config";
 
 export const Container = styled('div', {
-    padding: '1.5rem 2rem',
+    display: 'flex',
+    justifyContent: "flex-end",
+    alignItems: "center",
     borderRadius: '0.25rem',
     color: '$titleColor',
-
+    // overflow: "hidden",
+    height: '100%',
+    width: 'inherit',
+    
     header: {
         display: 'flex',
         alignItems: 'center',

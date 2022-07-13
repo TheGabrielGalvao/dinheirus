@@ -9,10 +9,12 @@ export const {styled, css, globalCss, createTheme} = createStitches({
             secondaryColor: '',
             dangerColor: '',
             successColor: '#33CC95',
+            successColorLight: '#DCF5E8',
             warningColor: '',
             infoColor: '',
-            titleColor: '',
+            titleColor: '#000',
             textColor: '#707070',
+            textColorLight: '#A1A0BD',
             moduleIconColor: '',
             shadowColor: '',
             moduleIconActiveColor: '#FFF',
@@ -64,11 +66,7 @@ export const dark = createTheme({
         toggleColor: '#fff',
         filterStyle: 'brightness(2)',
     },
-    shadows: {
-        filterStyle: 'brightness(2)',
-    }
 })
-
 
 export const globalStyles = globalCss({
     '*': {

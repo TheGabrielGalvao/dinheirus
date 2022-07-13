@@ -1,7 +1,6 @@
 import { ReactNode } from "react"
-import { BiDotsHorizontal, BiDotsHorizontalRounded, BiUpArrowAlt } from "react-icons/bi"
 import { Button, ButtonProps } from "../Button"
-import { Container } from "./styles"
+import { Container, StyledHeader } from "./styles"
 
 interface Props {
     children?: ReactNode
@@ -16,21 +15,18 @@ interface Props {
 export const Card = ({children, header, background}: Props) => {
     return(
         <Container background={background}>
-            <header>
-                <p>{header?.title}</p>
-                {
-                    header?.button &&
+            {
+                header &&
+                <StyledHeader>
+                    <p>{header?.title}</p>
+                    {
                         <Button color={header.button?.color}>
                             {header.button?.children}
                         </Button>
-                }
-            </header>
-            {/* <strong>
-                {new Intl.NumberFormat('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL',
-                }).format(5000)}
-            </strong> */}
+                    }
+                </StyledHeader>
+            }
+            
             {children}
         </Container>
     )

@@ -1,9 +1,8 @@
 import { createContext, FormEvent, useContext, useEffect, useState } from "react"
 import { BrowserRouter } from "react-router-dom"
-import { Layout, Menu } from "../../components/gui"
+import { Content, Layout, Menu } from "../../components/gui"
 import { navConfig } from "../../util/navigation.config"
 import { dark, globalStyles, light } from "../../util/stitches.config"
-import { Content } from "./styles"
 import { App, AppContextData, AppsProviderProps } from "./types"
 
 export const AppContext = createContext<AppContextData>({} as AppContextData)

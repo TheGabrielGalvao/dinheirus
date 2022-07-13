@@ -1,12 +1,12 @@
 import { useRoutes } from "react-router-dom";
+import { Dashboard } from "./pages/Dashboard";
 import { Finance } from "./pages/Finance";
-import { Home } from "./pages/Home";
 
 export const AppRoutes = () => (
     useRoutes([
         {
             path: '/',
-            element: <Home />
+            element: <Dashboard />
         },
         {
             path: '/wallets',

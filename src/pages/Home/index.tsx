@@ -1,6 +1,6 @@
 import { BiDollar, BiDotsHorizontalRounded, BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
 import { Card } from "../../components/gui/Card";
-import { Resume } from "../../components/Resume";
+import { Resume } from "../../components/molecules/telemetry/BaseTelemetry";
 import { DashboardHeader } from "./styles";
 
 export const Home = () => (
