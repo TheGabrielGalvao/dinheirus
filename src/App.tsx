@@ -1,15 +1,15 @@
 import { BrowserRouter } from "react-router-dom"
-import { AppProvider } from "./contexts/AppProvider"
-import { AppRoutes } from "./routes"
+import { LayoutProvider } from "./contexts/LayoutProvider"
+import { LayoutRoutes } from "./routes"
 import { globalStyles } from "./util/globalStyle"
 
-function App() {
+function Layout() {
   globalStyles()
   return (
-    <AppProvider>
-        <AppRoutes />
-    </AppProvider>
+    <LayoutProvider>
+        <LayoutRoutes />
+    </LayoutProvider>
   )
 }
 
-export default App
+export default Layout

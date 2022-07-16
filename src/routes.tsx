@@ -2,7 +2,7 @@ import { useRoutes } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { Finance } from "./pages/Finance";
 
-export const AppRoutes = () => (
+export const LayoutRoutes = () => (
     useRoutes([
         {
             path: '/',

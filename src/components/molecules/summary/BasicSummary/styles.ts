@@ -1,7 +1,7 @@
 import { styled } from "../../../../util/stitches.config";
 
 
-export const StyledTelemetry = styled('div', {
+export const StyledSummary = styled('div', {
     display: 'flex',
     flexDirection: "column",
     justifyContent: "flex-start",

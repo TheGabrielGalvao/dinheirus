@@ -18,7 +18,7 @@ export const Metrics = styled('section', {
     flexWrap: 'wrap',
     gap: '2rem',
     width: '100%',
-    height: '20vh',
+    height: '15vh',
     padding: '2rem',
 })
 
@@ -29,6 +29,6 @@ export const DashboardFooter = styled('section', {
     flexWrap: 'wrap',
     gap: '2rem',
     width: '100%',
-    height: '40vh',
+    height: '43vh',
     padding: '2rem',
 })

@@ -1,6 +1,6 @@
 import { ChangeEventHandler, FormEvent, ReactNode } from "react"
 
-export interface App {
+export interface ILayout {
     Id: number
     Name: string
     Label: string
@@ -10,13 +10,13 @@ export interface App {
     End?: boolean
 }
 
-export interface AppContextData {
-    navigation: App[]
+export interface ILayoutContextData {
+    navigation: ILayout[]
     handleSearch: ChangeEventHandler<HTMLInputElement>
     handleToggleTheme: () => void
     theme: string
 }
 
-export interface AppsProviderProps {
+export interface ILayoutsProviderProps {
     children: ReactNode
 }

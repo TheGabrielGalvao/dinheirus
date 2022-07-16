@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { EColorType } from "../../../../util/constants/EColorType"
 import { ButtonProps } from "../../../gui/Button"
 import { Card } from "../../../gui/Card"
 import { Container} from "./styles"
@@ -8,7 +9,7 @@ interface Props {
         title?: string
         icon?: ReactNode
         value?: number
-        background?: 'transparent' |  'default' |  'primary' |  'success' |  'warning' |  'danger'
+        background?: EColorType
     }
     header?: {
         title?: string
@@ -18,7 +19,7 @@ interface Props {
     children?: ReactNode
 }
 
-export const BaseTelemetry = ({body, header, children}: Props) => {
+export const BaseSummary = ({body, header, children}: Props) => {
     return (
         <Card background={body?.background} header={header} >
             <Container>

@@ -20,11 +20,11 @@ export const Container = styled('div', {
         }
     },
 
-    strong: {
+    '& > strong': {
         display: 'block',
         marginTop: '1rem',
         fontSize: '2rem',
-        fontWeight: '500',
+        fontWeight: 800,
         lineHeight: '3rem',
     }
 })

@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { EColorType } from "../../../util/constants/EColorType"
 import { Button, ButtonProps } from "../Button"
 import { Container, StyledHeader } from "./styles"
 
@@ -9,7 +10,7 @@ interface Props {
         icon?: ReactNode
         button?: ButtonProps
     }
-    background?: 'transparent' |  'default' |  'primary' |  'success' |  'warning' |  'danger'
+    background?: EColorType
 }  
 
 export const Card = ({children, header, background}: Props) => {

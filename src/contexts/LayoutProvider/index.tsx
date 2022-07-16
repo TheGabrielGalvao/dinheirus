@@ -3,14 +3,14 @@ import { BrowserRouter } from "react-router-dom"
 import { Content, Layout, Menu } from "../../components/gui"
 import { navConfig } from "../../util/navigation.config"
 import { dark, globalStyles, light } from "../../util/stitches.config"
-import { App, AppContextData, AppsProviderProps } from "./types"
+import { ILayout, ILayoutContextData, ILayoutsProviderProps } from "./types"
 
-export const AppContext = createContext<AppContextData>({} as AppContextData)
+export const LayoutContext = createContext<ILayoutContextData>({} as ILayoutContextData)
 
-export const AppProvider = ({children}: AppsProviderProps) => {
+export const LayoutProvider = ({children}: ILayoutsProviderProps) => {
     const [theme, setTheme] = useState<string>(light)
     const [search, setSearch] = useState('')
-    const [navigation, setApp] = useState<App[]>(navConfig)
+    const [navigation, setILayout] = useState<ILayout[]>(navConfig)
 
     useEffect(() => {
       
@@ -20,10 +20,10 @@ export const AppProvider = ({children}: AppsProviderProps) => {
         setSearch(event.currentTarget.value.toLowerCase())
         
         if(search.length > 1){
-            setApp([...navConfig].filter(item => item.Label.toLowerCase().indexOf(search) !== -1))
+            setILayout([...navConfig].filter(item => item.Label.toLowerCase().indexOf(search) !== -1))
         }
         else{
-            setApp(navConfig)
+            setILayout(navConfig)
         }
     }
 
@@ -33,7 +33,7 @@ export const AppProvider = ({children}: AppsProviderProps) => {
 
     globalStyles()
     return (
-        <AppContext.Provider value={{ navigation, handleSearch: handleSearchChange, theme, handleToggleTheme}}>
+        <LayoutContext.Provider value={{ navigation, handleSearch: handleSearchChange, theme, handleToggleTheme}}>
             <BrowserRouter>
                 <Layout className={theme}>
                     <Menu />
@@ -42,7 +42,7 @@ export const AppProvider = ({children}: AppsProviderProps) => {
                     </Content>
                 </Layout>
             </BrowserRouter>
-        </AppContext.Provider>
+        </LayoutContext.Provider>
     )
 
 }

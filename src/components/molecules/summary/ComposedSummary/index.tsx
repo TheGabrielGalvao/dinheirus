@@ -1,12 +1,12 @@
 import { moneyFormat } from "../../../../util/format"
-import { BaseTelemetry } from "../BaseTelemetry"
+import { BaseSummary } from "../BaseSummary"
 import { Detail, TotalValue } from "./styles"
 
 
 
-export const TotalBalanceTelemetry = () => {
+export const ComposedSummary = () => {
     return (
-        <BaseTelemetry>
+        <BaseSummary>
             <Detail>
                 <h1>Total Ballance</h1>
                 <strong>+ {moneyFormat(20)}</strong>
@@ -16,6 +16,6 @@ export const TotalBalanceTelemetry = () => {
                 <h1>{moneyFormat(200)}</h1>
                 <p>Wallets Amount</p>
             </TotalValue>
-        </BaseTelemetry>
+        </BaseSummary>
     )
 }

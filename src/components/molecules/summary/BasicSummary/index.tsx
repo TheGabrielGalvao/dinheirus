@@ -1,13 +1,13 @@
 import { BiArrowFromTop, BiArrowToTop, BiUpArrowAlt } from "react-icons/bi"
 import { moneyFormat } from "../../../../util/format"
-import { BaseTelemetry } from "../BaseTelemetry"
-import { StyledTelemetry } from "./styles"
+import { BaseSummary } from "../BaseSummary"
+import { StyledSummary } from './styles'
 
 
-export const BasicTelemetry = () => {
+export const BasicSummary = () => {
     return (
-        <BaseTelemetry>
-            <StyledTelemetry>
+        <BaseSummary>
+            <StyledSummary>
                 <h1>Total Ballance</h1>
                 <p>
                     <span>{moneyFormat(20)}</span>
@@ -16,7 +16,7 @@ export const BasicTelemetry = () => {
                         <BiUpArrowAlt />
                     </div>
                 </p>
-            </StyledTelemetry>
-        </BaseTelemetry>
+            </StyledSummary>
+        </BaseSummary>
     )
 }

@@ -1,14 +1,15 @@
 import { BiDotsHorizontalRounded } from "react-icons/bi";
-import { BaseTelemetry } from "../../components/molecules/telemetry/BaseTelemetry";
-import { BasicTelemetry } from "../../components/molecules/telemetry/BasicTelemetry";
-import { TotalBalanceTelemetry } from "../../components/molecules/telemetry/TotalBallanceTelemetry";
+import { BaseSummary } from "../../components/molecules/summary/BaseSummary";
+import { BasicSummary } from "../../components/molecules/summary/BasicSummary";
+import { LastTransactions } from "../../components/molecules/summary/LastTransactions";
+import { ComposedSummary } from "../../components/molecules/summary/ComposedSummary";
 import { DashboardFooter, DashboardHeader, Metrics } from "./styles";
 
 export const Dashboard = () => (
     <>
         <DashboardHeader>
-            <TotalBalanceTelemetry />
-            <BaseTelemetry header={{
+            <ComposedSummary />
+            <BaseSummary header={{
                 title: 'Report',
                 button: {
                     children: <BiDotsHorizontalRounded />
@@ -16,19 +17,14 @@ export const Dashboard = () => (
             }} />
         </DashboardHeader>
         <Metrics>
-            <BasicTelemetry />
-            <BasicTelemetry />
-            <BasicTelemetry />
-            <BasicTelemetry />
+            <BasicSummary />
+            <BasicSummary />
+            <BasicSummary />
+            <BasicSummary />
         </Metrics>
         <DashboardFooter>
-            <BaseTelemetry header={{
-                title: 'Latest Transactions',
-                button: {
-                    children: <BiDotsHorizontalRounded />
-                }
-            }} />
-            <BaseTelemetry header={{
+            <LastTransactions />
+            <BaseSummary header={{
                 title: 'Spending This Month',
                 button: {
                     children: <BiDotsHorizontalRounded />

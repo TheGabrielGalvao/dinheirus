@@ -7,7 +7,7 @@ import {
 } from 'react-icons/bi'
 import logo from '../../../assets/img/logo.png'
 import { CustomNavLink } from "../CustomNavLink";
-import { useApp } from "../../../hooks/useApp";
+import { useLayout } from "../../../hooks/useLayout";
 import { MenuLogo } from "./components/MenuLogo";
 import { CustomInput } from "../CustomInput";
 import { CustomSwitch } from "../CustomSwitch";
@@ -17,7 +17,7 @@ import { useState } from "react";
 
 export const Menu = () => {
     const [toggle, setToggle] = useState<'open' | 'close'>('close')
-    const {navigation, handleSearch, theme} = useApp()
+    const {navigation, handleSearch, theme} = useLayout()
 
     const handleToggle = () => {
         setToggle(toggle === 'open' ? 'close' : 'open')
@@ -26,7 +26,7 @@ export const Menu = () => {
     return (
         <StyledMenu toggle={toggle}>
             <header>
-                <MenuLogo img={logo} title="Gambito" legend="React JS" />
+                <MenuLogo img={logo} title="Dinheirus" legend="Gestão Financeira" />
                 <BiChevronRight onClick={handleToggle}/>
             </header>
             

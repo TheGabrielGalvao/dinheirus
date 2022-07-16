@@ -1,4 +1,4 @@
-import { useApp } from "../../../hooks/useApp";
+import { useLayout } from "../../../hooks/useLayout";
 import { Switch, SwitchThumb } from "./styles";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const CustomSwitch = ({toggle}: Props) => {
-  const {handleToggleTheme} = useApp()
+  const {handleToggleTheme} = useLayout()
   return (
     <Switch
       toggle={toggle}
