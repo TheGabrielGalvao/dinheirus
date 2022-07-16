@@ -20,7 +20,7 @@ export const TotalValue = styled('span', {
         
     },
     p: {
-        color: "$bodyColor",
+        color: "$textColorLight",
         fontFamily: 'Mulish, sans-serif',
         fontWeight: 900,
         fontSize: 16,

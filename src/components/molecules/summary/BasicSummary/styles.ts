@@ -30,18 +30,6 @@ export const StyledSummary = styled('div', {
         },
         
     },
-
-    '& .badge': {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        color: "$successColor",
-        padding: 5,
-        background: '$successColorLight',
-        borderRadius: 20,
-        // border: '1px solid $successColor'    
-    },
-
     
 
     h1: {
@@ -50,6 +38,8 @@ export const StyledSummary = styled('div', {
         fontWeight: 700,
         fontSize: 20
     },
+
+    
 
     
     // p: {

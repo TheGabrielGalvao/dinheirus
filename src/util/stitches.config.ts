@@ -51,7 +51,7 @@ export const dark = createTheme({
         defaultColor: '',
         primaryColor: '#3a3b3c',
         secondaryColor: '',
-        dangerColor: '',
+        dangerColor: '#D14F4F',
         successColor: '#33CC95',
         warningColor: '',
         infoColor: '',
