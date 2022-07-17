@@ -4,7 +4,7 @@ export const {styled, css, globalCss, createTheme} = createStitches({
     theme: {
         colors: {
             defaultColor: '',
-            primaryColor: '#695CFE',
+            primaryColor: '#4C49ED',
             primaryColorLight: '#F6F5FF',
             secondaryColor: '',
             dangerColor: '#D14F4F',

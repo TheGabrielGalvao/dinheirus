@@ -1,5 +1,6 @@
 import { createContext, FormEvent, useContext, useEffect, useState } from "react"
 import { BrowserRouter } from "react-router-dom"
+import { CustomModal } from "../../components/atoms/CustomModal"
 import { Content, Layout, Menu } from "../../components/gui"
 import { navConfig } from "../../util/navigation.config"
 import { dark, globalStyles, light } from "../../util/stitches.config"
@@ -39,6 +40,7 @@ export const LayoutProvider = ({children}: ILayoutsProviderProps) => {
                     <Menu />
                     <Content>
                         {children}
+                        <CustomModal isOpen={true} />
                     </Content>
                 </Layout>
             </BrowserRouter>

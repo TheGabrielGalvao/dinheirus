@@ -6,7 +6,7 @@ export const StyledLine = styled('p', {
     alignItems: "center",
     gap: 5,
     width: '100%',
-    padding: 10,
+    padding: '1rem',
     transition: '$tran03',
     cursor: 'pointer',
 
@@ -48,7 +48,7 @@ export const StyledLine = styled('p', {
         color: '$successColor',
         fontFamily: 'Mulish, sans-serif',
         fontWeight: 800,
-        fontSize: 25
+        fontSize: 22
     },
 
     variants: {

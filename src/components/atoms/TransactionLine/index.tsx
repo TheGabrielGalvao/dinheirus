@@ -31,9 +31,9 @@ export const TransactionLine = ({transaction}: TransactionLineProps) => {
             </span>
             <strong>
                 { 
-                    transaction.Type === ETransactionType.INCOMING
+                    transaction.Type === ETransactionType.INCOMING && transaction.Value > 0
                     ? '+' + moneyFormat(transaction.Value)
-                    : '-' + moneyFormat(transaction.Value)
+                    : moneyFormat(transaction.Value)
                 }
 
             </strong>

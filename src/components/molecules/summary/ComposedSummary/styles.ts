@@ -11,7 +11,7 @@ export const TotalValue = styled('span', {
     padding: 80,
     borderTopLeftRadius: '50%',
     borderBottomLeftRadius: '50%',
-    
+
     h1: {
         color: "$white",
         fontWeight: 800,
@@ -36,6 +36,25 @@ export const Detail = styled('div', {
     padding: 50,
     // background: '#c23',
 
+    variants: {
+        color: {
+            transparent: {},
+            default: {},
+            primary: {},
+            success: {
+                strong: {
+                    color: "$successColor",
+                }
+            },
+            warning: {},
+            danger: {
+                strong: {
+                    color: "$dangerColor",
+                }
+            },
+        }
+    },
+
     h1: {
         color: "$titleColor",
         fontFamily: 'Mulish, sans-serif',
@@ -44,7 +63,6 @@ export const Detail = styled('div', {
     },
 
     strong: {
-        color: "$successColor",
         fontWeight: 800,
         fontFamily: 'Inter, sans-serif', 
         fontSize: 33,
